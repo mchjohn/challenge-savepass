@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components/native';
 import Feather from '@expo/vector-icons/Feather';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
 
 interface ContainerProps {
   hasUserData: boolean;
@@ -54,15 +55,15 @@ export const SecondaryMessage = styled.Text`
   color: #ffffff;
 `;
 
-export const AddButton = styled.Pressable`
+export const AddButton = styled(RectButton)`
+  background-color: #508bfc;
   padding: ${RFValue(14.5)}px;
-  border: 1.5px #508bfc;
   border-radius: 4px;
 `;
 
 export const Icon = styled(Feather)``;
 
-export const BackButton = styled.Pressable`
+export const BackButton = styled(BorderlessButton)`
   position: absolute;
   left: 13px;
   bottom: 23px;

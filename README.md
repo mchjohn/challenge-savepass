@@ -1,10 +1,6 @@
 ## Preview
 <div>
-  <img src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F02c371f4-c167-4a5f-b12c-d791a0dedaf5%2FScreenshot_1626892767.png?table=block&id=41492ed2-6fa6-4f2b-b02a-fe1eaa3f6be5&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=2000&userId=&cache=v2" data-canonical-src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F02c371f4-c167-4a5f-b12c-d791a0dedaf5%2FScreenshot_1626892767.png?table=block&id=41492ed2-6fa6-4f2b-b02a-fe1eaa3f6be5&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=2000&userId=&cache=v2" width="260" height="520" />
-
-  <img src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7ef8d52f-aa6d-4dc5-9918-96cf79297659%2FScreenshot_1626892772.png?table=block&id=3f81dbb6-181f-45b5-8615-d33339aab5a3&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=2000&userId=&cache=v2" data-canonical-src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7ef8d52f-aa6d-4dc5-9918-96cf79297659%2FScreenshot_1626892772.png?table=block&id=3f81dbb6-181f-45b5-8615-d33339aab5a3&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=2000&userId=&cache=v2" width="260" height="520" />
-
-  <img src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3a1fcb8a-60ec-43ae-a1bb-3fecd1a50730%2FScreenshot_1626892758.png?table=block&id=bf36fcb7-075f-4a94-8f14-32585293d95e&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=2000&userId=&cache=v2" data-canonical-src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3a1fcb8a-60ec-43ae-a1bb-3fecd1a50730%2FScreenshot_1626892758.png?table=block&id=bf36fcb7-075f-4a94-8f14-32585293d95e&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=2000&userId=&cache=v2" width="260" height="520" />
+  <img src="https://res.cloudinary.com/sk84all/image/upload/v1639840269/GitHub%20Projects/WhatsApp_Video_2021-12-18_at_11.59.35_nd2lnb.gif" data-canonical-src="https://res.cloudinary.com/sk84all/image/upload/v1639840269/GitHub%20Projects/WhatsApp_Video_2021-12-18_at_11.59.35_nd2lnb.gif" width="260" height="520" />
  </div>
 
 ## Sobre esse projeto
@@ -34,6 +30,13 @@ Para que esse teste passe, deve ser implementada a lógica para obter dados no a
 - **Home should be able to filter pass data with search bar**
 
 Para que esse teste passe, deve ser implementada a lógica para filtrar os dados de passagem com a barra de pesquisa.
+
+## Features a mais
+
+- Adicionado um ScrollView na tela de registro de senha, para melhorar a UX.
+- Criada uma função para deletar uma senha.
+- Adicionado um Swipeable para deletar a senha quando o usuário deslizar o dedo da esquerda para a direita em cima da senha.
+- Adicionado o Moti para fazer uma animação no Swipeable quando uma nova senha é adicionada.
 
 ## Instalação
 

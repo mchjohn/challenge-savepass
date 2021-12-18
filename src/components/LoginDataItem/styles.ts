@@ -58,3 +58,22 @@ export const Email = styled.Text`
   font-size: ${RFValue(13)}px;
   color: #888D97;
 `;
+
+export const Subtitle = styled.Text`
+  font-family: 'Rubik_400Regular';
+  font-size: ${RFValue(13)}px;
+  color: #888D97;
+`;
+
+export const SwipeableButton = styled(LinearGradient).attrs({
+  end: { x: 1, y: 0 }
+})`
+  flex-direction: row;
+  
+  align-items: center;
+  min-height: ${RFValue(80)}px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 22px 20px;
+  margin-bottom: 8px;
+`;

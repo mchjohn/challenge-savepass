@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 import Feather from '@expo/vector-icons/Feather';
 import { TextInput } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { RectButton } from 'react-native-gesture-handler';
 
 
 export const Container = styled.View`
@@ -26,7 +27,7 @@ export const Input = styled(TextInput)`
   border-right-width: 0;
 `;
 
-export const Button = styled.Pressable`
+export const Button = styled(RectButton)`
   background: #FFCC00;
   padding: 16px;
   border-top-right-radius: 4px;

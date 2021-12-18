@@ -26,13 +26,13 @@ type LoginListDataProps = LoginDataProps[];
 
 export function Home() {
   const [searchText, setSearchText] = useState('');
+  const [swipeableLoading, setSwipeableLoading] = useState(false);
   const [searchListData, setSearchListData] = useState<LoginListDataProps>([]);
   const [data, setData] = useState<LoginListDataProps>([]);
 
-  async function loadData() {
-    const dataKey = '@savepass:logins';
-    // Get asyncStorage data, use setSearchListData and setData
+  const dataKey = '@savepass:logins';
 
+  async function loadData() {
     try {
       const dataStorage = await AsyncStorage.getItem(dataKey);
 
@@ -49,12 +49,35 @@ export function Home() {
   }
 
   function handleFilterLoginData() {
-    const filteredData = data.filter(item => item.service_name === searchText);
+    const filteredData = searchListData.filter(item => {
+      const parsedLowerCase = item.service_name.toLowerCase();
+
+      if (parsedLowerCase.includes(searchText.toLowerCase()))
+        return item;
+    });
+
     setSearchListData(filteredData);
   }
 
   function handleChangeInputText(text: string) {
+    if (!text) {
+      setSearchListData(data);
+    }
+    
     setSearchText(text);
+  }
+
+  async function handleDeleteLoginData(id: string) {
+    const newListData = searchListData.filter((item) => {
+      if (item.id !== id) {
+        return item;
+      }
+    });
+
+    await AsyncStorage.setItem(dataKey, JSON.stringify(newListData));
+
+    setSearchListData(newListData);
+    setSwipeableLoading(true);
   }
 
   useFocusEffect(useCallback(() => {
@@ -65,8 +88,8 @@ export function Home() {
     <>
       <Header
         user={{
-          name: 'Rocketseat',
-          avatar_url: 'https://i.ibb.co/ZmFHZDM/rocketseat.jpg'
+          name: 'Michel John',
+          avatar_url: 'https://github.com/mchjohn.png'
         }}
       />
       <Container>
@@ -95,9 +118,11 @@ export function Home() {
           data={searchListData}
           renderItem={({ item: loginData }) => {
             return <LoginDataItem
+              id={loginData.id}
               service_name={loginData.service_name}
               email={loginData.email}
               password={loginData.password}
+              handleDeleteLoginData={handleDeleteLoginData}
             />
           }}
         />
